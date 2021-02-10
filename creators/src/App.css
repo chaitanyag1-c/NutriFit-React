@@ -8,8 +8,8 @@ body{
   /* background:url('./Components/bgmage.jpg'); */
 }
 
-body::before{
-  background: url('./Components/bgmage.jpg') no-repeat center center/cover ;
+.container::before{
+  background: url('./Components/bgmage.jpg') no-repeat center center/cover !important;
   content: "";
   position: absolute;
   top:0;
@@ -19,12 +19,26 @@ body::before{
   height: 108vh;
   width: 98vw;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  background: aliceblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #69C401;
+  border-radius: 3%;
+
+}
 header{
   background: linear-gradient(62deg, white, aliceblue);
   height:60px;
   font-family: 'Ubuntu', sans-serif;
   /* font-family: 'Black Ops One', cursive; */
 font-size: 23px;
+height: 100px;
+position: fixed;
+width: 100%;    
+z-index: 2;
 }
 .ulhead{
   display: flex;
@@ -43,6 +57,8 @@ font-size: 23px;
   width: 667px;
   margin: 0px;
   height: 60px;
+  top: 15px;
+  
 }
 .nav-items>li{
 list-style: none;
@@ -54,6 +70,7 @@ margin-left: 25px;
 .nav-items>li>a{
   text-decoration: none;
   color:#dd3163;
+  font-size: 25px
 }
 .nav-items>li:hover{
   transform: translate(2px,2px);
@@ -82,7 +99,7 @@ margin-left: 25px;
 
 }
 .hero-text>h2 {
-  font-size: 36px;
+  font-size: 43px;
   font-family: sans-serif;
   
   margin-top: -28px;
@@ -121,18 +138,19 @@ input:focus {
 }
 
 .container {
-  background-color: white;
+  background-color: transparent;
   display: inline-block;
   box-shadow: 3px 5px 20px 6px darkslategrey;
   margin-left: 30vw;
   margin-top: 50px;
   width:500px;
+  margin-top: 150px;
 }
 label{
   color:gray;
 }
 .bt{
-  background: white;
+  background: transparent;
   transition: all 0.3s ease-in;
   border:1px solid skyblue;
   margin-left: 160px;

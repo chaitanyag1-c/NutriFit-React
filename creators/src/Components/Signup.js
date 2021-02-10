@@ -114,8 +114,8 @@ const Signup = () => {
                 <input type="number" placeholder="Enter AGE" required /> <br />
 
                 <input type="text"  placeholder="E-mail" id="input1"   required></input> <br />
-                <p id="nice">Invalid Email</p>
-                <p id="nice2" className="vg">It's a Valid Email</p>
+                {/* <p id="nice">Invalid Email</p>
+                <p id="nice2" className="vg">It's a Valid Email</p> */}
 
                     <span style={{ fontSize: '16px', color: 'grey',marginLeft: '24px' }}><label for="psw">Password </label></span> <br />
 
@@ -151,7 +151,7 @@ const Signup = () => {
                         <option>Ujjain</option>
                     </select> <br />
                     
-                    <input type="submit" className="bt" onSubmit="dada()" />
+                    <input type="submit" className="bt"  />
         </form>
     </div>
             )

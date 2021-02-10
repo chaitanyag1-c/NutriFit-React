@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div>
 
-            <header data-aos="fade-out">
+            <header data-aos="fade-out" >
         <ul className="ulhead">
              <img src={logo} alt="img" style={{width:'10%'}}/> 
     
