@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
-// window.onload=function(){
+
+// window.onload= function(){
 //     let input1 = document.getElementById('input1');
 //     let nice = document.getElementById('nice');
 //     let nice2 = document.getElementById('nice2');
@@ -24,8 +25,9 @@ import '../App.css'
 //             nice2.classList.add('gooddisplay');
 //             nice2.classList.remove('vg');
     
-    
 //         }
+        
+
 //         else {
 //             nice.classList.remove('nonedisplay');
 //             nice2.classList.remove('gooddisplay');
@@ -34,7 +36,7 @@ import '../App.css'
 //         }
     
 //     });
-    
+
 //     var myInput = document.getElementById("psw");
 //     var letter = document.getElementById("letter");
 //     var capital = document.getElementById("capital");
@@ -102,11 +104,10 @@ import '../App.css'
 
 
 
-
 const Signup = () => {
     return (
 
-        <div className="container">
+        <div className="container" data-aos="fade-out">
             <form action="" className="form">
                 <h2 className="text-align">Signup</h2>
                 <input type="text" placeholder="Enter your name" autoComplete="off" required /> <br />
@@ -118,7 +119,7 @@ const Signup = () => {
 
                     <span style={{ fontSize: '16px', color: 'grey',marginLeft: '24px' }}><label for="psw">Password </label></span> <br />
 
-                <input type="password"  id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autoComplete="off"/>
+                <input type="password"  id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autoComplete="off" />
 
                     <div id="message">
                         <h3>Password must contain the following:</h3>
@@ -150,7 +151,7 @@ const Signup = () => {
                         <option>Ujjain</option>
                     </select> <br />
                     
-                    <input type="submit" className="bt" />
+                    <input type="submit" className="bt" onSubmit="dada()" />
         </form>
     </div>
             )
