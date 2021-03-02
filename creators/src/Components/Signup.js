@@ -108,7 +108,7 @@ const Signup = () => {
     return (
 
         <div className="container" data-aos="fade-out">
-            <form action="" className="form">
+            <form action="/login" className="form">
                 <h2 className="text-align">Signup</h2>
                 <input type="text" placeholder="Enter your name" autoComplete="off" required /> <br />
                 <input type="number" placeholder="Enter AGE" required /> <br />
@@ -151,7 +151,7 @@ const Signup = () => {
                         <option>Ujjain</option>
                     </select> <br />
                     
-                    <input type="submit" className="bt"  />
+                    <input type="submit" className="bt" />
         </form>
     </div>
             )

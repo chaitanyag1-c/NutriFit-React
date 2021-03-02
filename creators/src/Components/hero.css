@@ -8,7 +8,7 @@ font-family: monospace;
 
 }
 .hero-container{
-    height: 70vh;
+    height: 97vh;
 }
 .hero-container::before{
     background: url('./hero-image.jpg') no-repeat center center/cover;
@@ -24,11 +24,14 @@ font-family: monospace;
 .hero-heading{
 text-transform: capitalize;
 color: #dd3163;
+background:aliceblue;
 font-size: 3.5rem;
 }
 .hero-slogan{
 text-transform: capitalize;
+background:aliceblue;
 color: #dd3163;
+
 font-size: 3.3rem;
 
 }

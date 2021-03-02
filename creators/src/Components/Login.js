@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-
+import mic from './mic.png'
 // responseGoogle = (response) => {
 //     console.log(response);
 //     console.log(response.profileObj);
@@ -20,15 +20,65 @@ import '../App.css'
 //     console.log(end1);
 //   }
 
+
 const Login = () => {
+    
+        window.onload = function ()
+        {
+            const btn = document.getElementById('bt1');
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            const kaka=document.getElementById('kaka');
+            // console.log(kaka.value);
+            // const greeting = ['I am good you little piece of shit', 'I think you should study instead of asking me', 'I am sexy what about you'];
+            btn.addEventListener('click',()=>{
+                recognition.start();
+
+            })
+    
+    recognition.onstart = function() {
+        console.log('Bolo Bhai');
+    };
+    
+    recognition.onresult = function (event) {
+        const current = event.resultIndex;
+        const transcript = event.results[current][0].transcript;
+        kaka.value = transcript;
+        talkout(transcript);
+    };
+    
+    
+    
+    
+    
+    
+    function talkout(message) {
+        const speech = new SpeechSynthesisUtterance();
+        speech.rate = 1.3;
+        
+        speech.volume = 1;
+        speech.pitch = 1;
+        speech.text =message;
+    
+        // if (message.includes('how are you')) {
+        //     const how = greeting[Math.floor(Math.random() * greeting.length)];
+        //     speech.text = how;
+        // }
+    
+        // content1.textContent=transcript;
+        window.speechSynthesis.speak(speech);
+    }
+    }
+
     return (
 
             <div className="container" data-aos="fade-out">
+            <a id="bt1"> <img src={mic} /> </a> 
             <form action="" className="form">
                 <h2 className="text-align">Login</h2>
-                <input type="text" placeholder="Enter your name" autoComplete="off" required /> <br />
+                <input type="text" id="kaka" placeholder="Enter your Username" autoComplete="off" required /><br />
                 <input type="password" placeholder="Enter Password" autoComplete="off" required /> <br />
-                <input type="submit" className="bt" value="Login"/>
+                <input type="submit" className="bt"  value="Login"/>
         </form>
         {/* <div className="end"></div>
         <GoogleLogin
@@ -41,5 +91,5 @@ const Login = () => {
         </div>
     )
 }
-          
+
 export default Login

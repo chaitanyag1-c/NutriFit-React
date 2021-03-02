@@ -1,0 +1,141 @@
+footer {
+    background: aliceblue;
+    height: 30vh
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#footer-ul {
+    display: flex;
+    /* background: rebeccapurple; */
+    width: 70%;
+}
+
+footer img {
+    width: 5%;
+    transition: all 0.2s ease-in;
+}
+.menu a:hover{
+    color: #69C401;
+}
+
+
+footer img:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.stay {
+    font-size: 28px;
+    font-family: monospace;
+    color: #69C401 !important;
+}
+
+footer h1 {
+    color: black;
+    font-size: 18px;
+}
+
+.contact {
+    width: 35%;
+    margin-left: 22px;
+}
+
+.stay2 {
+    color: gray;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 115px;
+}
+
+.menu a {
+
+    padding: 6px;
+    text-decoration: none;
+    color: gray;
+    font-size: 17px;
+    font-weight: 800;
+    font-family: serif;
+    transition: 0.2s all ease-in-out;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* background: tomato; */
+
+}
+.Icons{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    position: relative;
+    left: 459px;
+}
+.top-row a{
+    margin:5px;
+    padding:5px;
+}
+.bottom-row{
+    margin-top: 20px;
+}
+.bottom-row a{
+    margin:5px;
+    padding:5px;
+}
+#move-left{
+    margin-right: 96px;
+}
+.footer-subscribe{
+height: 40vh;
+background: url(./bgmage.jpg)no-repeat center center/cover;
+opacity: 0.8;
+}
+.footer-subscribe h1{
+font-size: 30px;
+color: white;
+font-family: monospace;
+}
+.subscribe-text{
+background: #69C401;
+display: inline-block;
+
+margin: 22px;
+
+}
+.footer-subscribe input{
+width: 500px;
+height: 32px;
+font-size: 2rem;
+color: #69C401;
+}
+
+.footer-subscribe {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#footer-bt{
+color: white;
+background: #69C401;
+height: 40px;
+width: 92px;
+border: 2px solid mediumseagreen;
+margin: 7px;
+transition: all 0.2s ease-in;
+}
+#footer-bt:hover{
+border:none;
+cursor: pointer;
+color:#69C401;
+background: white;
+border-radius: 0;
+}

@@ -4,6 +4,8 @@ import './hero.css'
 import h1 from './healthy-means1.png'
 import h2 from './healthy-means2.png'
 import h3 from './healthy-means3.png'
+import Footer from './Footer'
+
 const Health = () => {
     return (
         <div>
@@ -14,7 +16,7 @@ const Health = () => {
                     <br />
                     <h2 className="hero-slogan">Eat healthy  <span class="highlight"> EVERYDAY</span>  </h2>
                 </div>
-                <button type="button" data-aos="fade-right" class="rounded-pill btn-responsive font-weight-bold btn btn-primary" style={{position: 'absolute',top: '400px',right: '296px'}}>Sign Up For Free</button>
+                <button type="button" data-aos="fade-right" class="rounded-pill btn-responsive font-weight-bold btn btn-primary" style={{ position: 'absolute', top: '400px', right: '296px' }}>Sign Up For Free</button>
             </div>
             <section className="landing-meals-week" >
 
@@ -81,8 +83,11 @@ const Health = () => {
                     </div>
                 </div>
             </section>
+            <Footer />   
         </div>
-
+        
+    
+  
 
 
     )

@@ -6,6 +6,8 @@ import Login from './Components/Login'
 import Error from './Components/Error'
 import Contact from './Components/Contact'
 import Health from './Components/Health'
+import Otp from './Components/Otp'
+import Select from './Components/Select'
 
 
 import {Route, Switch} from "react-router-dom";
@@ -35,21 +37,15 @@ function App() {
   return (
     <div>
     <Header/>
-
-    {/* <div className="end"></div>
-        <GoogleLogin
-            clientId="860940138744-moe9f340i2bmnt8gr768j55o4fegrs38.apps.googleusercontent.com"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy="single_host_origin"
-          /> */}
-
     <Switch>
     <Route exact path="/login" component={Login} />
     <Route exact path="/" component={Health} />
     
     <Route exact path="/signup" component={Signup} />
     <Route exact path="/contact" component={Contact} />
+    <Route exact path="/OTP" component={Otp} />
+    
+    <Route exact path="/Select" component={Select} />
     <Route path="*" component={Error} />
     </Switch>
     

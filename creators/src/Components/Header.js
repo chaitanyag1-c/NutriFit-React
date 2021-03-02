@@ -2,21 +2,89 @@ import React from 'react'
 import '../App.css'
 import logo from './navicon.png'
 import { Link } from "react-router-dom";
+
 const Header = () => {
+    window.onload =function() {
+    const toggleBtn =document.querySelector('.sidebar-toggle');
+const closeBtn =document.querySelector('.close-btn');
+const sidebar =document.querySelector('.sidebar');
+
+toggleBtn.addEventListener('click', function(){
+   
+    sidebar.classList.toggle('show-sidebar');
+});
+
+closeBtn.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+});
+    
+}
     return (
         <div>
 
             <header data-aos="fade-out" >
         <ul className="ulhead">
+     
+
              <img src={logo} alt="img" style={{width:'10%'}}/> 
-    
-            <div className="nav-items">
-                <li> <Link to="/">  Home  </Link>   </li>
+          
+            <div className="nav-items" >
+                <li > <Link to="/">  Home  </Link>   </li>
                 <li> <Link to="/login">  Login  </Link></li>
                 <li> <Link to="/signup">  Signup  </Link></li>
                 <li> <Link to="/contact">  Contact  </Link></li>
             </div>
         </ul>
+{/* Hamburger SideBAR */}
+       <div>
+  <button className="sidebar-toggle">
+    <i className="fas fa-bars" />
+  </button>
+  <aside className="sidebar">
+    <div className="sidebar-header">
+      <img src={logo} className="logo" alt="" />
+      <button className="close-btn">
+        <i className="fas fa-times" />
+      </button>
+    </div>
+    {/* links */}
+    <ul className="links">
+      <li>
+        <a href="index.html">home</a>
+      </li>
+      <li>
+        <a href="about.html">about</a>
+      </li>
+      <li>
+        <a href="projects.html">Select meal</a>
+      </li>
+      <li>
+        <a href="contact.html">contact</a>
+      </li>
+    </ul>
+    {/* social media */}
+    <ul className="social-icons">
+      <li>
+        <a href="https://www.twitter.com">
+          <i className="fab fa-facebook" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com">
+          <i className="fab fa-twitter" />
+        </a>
+      </li>
+     
+      <li>
+        <a href="https://www.twitter.com">
+          <i className="fab fa-linkedin" />
+        </a>
+      </li>
+     
+    </ul>
+  </aside>
+</div>
+
        </header>
        
         </div>
